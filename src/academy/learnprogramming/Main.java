@@ -9,6 +9,13 @@ public class Main {
         var scanner = new Scanner(System.in);
 
         System.out.println(Doctor.intro());
+        var userInput = "";
+
+        while (!userInput.equalsIgnoreCase("quit")) {
+            userInput = scanner.nextLine();
+            String response = Doctor.response(userInput);
+            System.out.println(response);
+        }
 
         scanner.close();
     }
